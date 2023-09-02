@@ -16,6 +16,6 @@ public class Violao : InstrumentoMusical, IAfinavel
 
     public override void Tocar()
     {
-        Console.WriteLine($"Tocando ${Nome}..");
+        Console.WriteLine($"Tocando {Nome}..");
     }
 }
