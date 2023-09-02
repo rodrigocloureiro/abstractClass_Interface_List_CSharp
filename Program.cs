@@ -20,7 +20,15 @@ public class Program
 
         foreach (InstrumentoMusical instrumento in listaInstrumentos)
         {
-            Console.WriteLine(instrumento.Nome);
+            instrumento.Tocar();
+
+            if (instrumento is IAfinavel afinavel)
+            {
+                afinavel.Afinar();
+                Console.WriteLine(afinavel.VerificarAfinacao() ? "Está afinado.." : "Não está afinado..");
+            }
+
+            Console.WriteLine("\n===============\n");
         }
 
         Console.ReadKey();
